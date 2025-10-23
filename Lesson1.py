@@ -17,10 +17,9 @@ if numbers_list:
     sum_list = sum(numbers_list)
     mean = st.mean(numbers_list)
     median = st.median(numbers_list)
-
-print(sum_list)
-print(mean)
-print(median)
+    print(sum_list)
+    print(mean)
+    print(median)
 
 
 random_number = random.randint(1, 100)
@@ -29,12 +28,12 @@ while True:
     try:
         number_input = int(input("Введите число: "))
     except ValueError:
-        print("Введите елое число")
+        print("Введите целое число")
     attempts += 1
     if number_input > random_number:
-        print("Lower")
+        print("Меньше")
     elif number_input < random_number:
-        print("more")
+        print("Больше")
     else:
         print(f"Поздравляем вы угадали число {random_number}, за {attempts} попыток")
         break
