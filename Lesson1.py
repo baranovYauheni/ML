@@ -1,6 +1,5 @@
 import random
 import statistics as st
-from statistics import median
 
 numbers_list = []
 while True:
@@ -13,9 +12,7 @@ while True:
     except ValueError:
         print("Это не число")
 
-print(numbers_list)
-
-if len(numbers_list) > 0:
+if numbers_list:
     sum_list = sum(numbers_list)
     mean = st.mean(numbers_list)
     median = st.median(numbers_list)
@@ -26,15 +23,19 @@ print(median)
 
 
 random_number = random.randint(1, 100)
-print(random_number)
+attempts = 0
 while True:
-    number_input = int(input("Введите число: "))
+    try:
+        number_input = int(input("Введите число: "))
+    except ValueError:
+        print("Введите елое число")
+    attempts += 1
     if number_input > random_number:
         print("Lower")
     elif number_input < random_number:
         print("more")
     else:
-        print("Congrat")
+        print(f"Поздравляем вы угадали число {random_number}, за {attempts} попыток")
         break
 
 
