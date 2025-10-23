@@ -11,6 +11,7 @@ while True:
         numbers_list.append(user_input)
     except ValueError:
         print("Это не число")
+        continue
 
 if numbers_list:
     sum_list = sum(numbers_list)
