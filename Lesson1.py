@@ -3,7 +3,7 @@ import statistics as st
 
 numbers_list = []
 while True:
-    user_input = input("ВВедите число: ")
+    user_input = input("Введите число: ")
     try:
         if user_input == "stop":
             break
